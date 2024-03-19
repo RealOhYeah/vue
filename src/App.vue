@@ -1,45 +1,20 @@
 <template>
-  <div class="App">
-
-    <!-- 快捷链接 -->
-    <XtxShortCut></XtxShortCut>
-    <!-- 顶部导航 -->
-    <XtxHeaderNav></XtxHeaderNav>
-    <!-- 轮播区域 -->
-    <XtxBanner></XtxBanner>
-    <!-- 新鲜好物 -->
-    <XtxNewGoods></XtxNewGoods>
-    <!-- 热门品牌 -->
-    <XtxHotBrand></XtxHotBrand>
-    <!-- 最新专题 -->
-    <XtxTopic></XtxTopic>
-    <!-- 版权底部   -->
-    <XtxFooter></XtxFooter>
-
+  <div id="app">
+    <BaseOne></BaseOne>
+    <BaseTwo></BaseTwo>
   </div>
 </template>
 
 <script>
-import XtxShortCut from './components/XtxShortCut.vue'
-import XtxHeaderNav from './components/XtxHeaderNav.vue'
-import XtxBanner from './components/XtxBanner.vue'
-import XtxNewGoods from './components/XtxNewGoods.vue'
-import XtxHotBrand from './components/XtxHotBrand.vue'
-import XtxTopic from './components/XtxTopic.vue'
-import XtxFooter from './components/XtxFooter.vue' 
-
+import BaseOne from './components/BaseOne'
+import BaseTwo from './components/BaseTwo'
 export default {
+  name: 'App',
   components: {
-    XtxShortCut,
-    XtxHeaderNav,
-    XtxBanner,
-    XtxNewGoods,
-    XtxHotBrand,
-    XtxTopic,
-    XtxFooter,
-    
+    BaseOne,
+    BaseTwo
   }
 }
 </script>
 
-<style></style>
+
