@@ -1,6 +1,6 @@
 <template>
-    <div class="hm-header">
-        我是hm-header
+    <div class="hm-footer">
+        我是hm-footer
     </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style>
-.hm-header {
+.hm-footer {
     height: 100px;
     line-height: 100px;
     text-align: center;
