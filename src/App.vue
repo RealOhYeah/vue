@@ -2,12 +2,15 @@
   <div id="app">
     <BaseOne></BaseOne>
     <BaseTwo></BaseTwo>
+    
+    <BaseTwo></BaseTwo>
+    <BaseTwo></BaseTwo>
   </div>
 </template>
 
 <script>
-import BaseOne from './components/BaseOne'
-import BaseTwo from './components/BaseTwo'
+import BaseOne from './components/BaseOne.vue'
+import BaseTwo from './components/BaseTwo.vue'
 export default {
   name: 'App',
   components: {

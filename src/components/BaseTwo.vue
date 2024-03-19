@@ -1,18 +1,25 @@
 <template>
-  <div class="base-one">
-    BaseTwo
+  <div class="base-count">
+    <button @click="count--">-</button>
+    <span>{{ count }}</span>
+    <button @click="count++">+</button>
+
   </div>
 </template>
 
 <script>
 export default {
-
+  data() {
+    console.log('Hello World');
+    return {
+      count: 100
+    }
+  }
 }
 </script>
 
 <style scoped>
-  div{
-    border: 3px solid red;
-    margin: 30px;
-  }
+.base-count {
+  margin: 20px;
+}
 </style>
