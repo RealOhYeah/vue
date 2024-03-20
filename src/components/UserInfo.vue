@@ -6,12 +6,14 @@
     <div>是否单身：{{ isSingle ? 是 : 不是 }} </div>
     <div>座驾：{{ car.brand }} </div>
     <div>兴趣爱好：{{ hobby.join('、') }} </div>
+
+
   </div>
 </template>
-
 <script>
 export default { 
   props: ['username','age','isSingle','car','hobby']
+  
 }
 </script>
 

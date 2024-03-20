@@ -12,12 +12,18 @@
     
     ></UserInfo>
 
+    <br><br><br>
+
+    <BaseProgress :w="width"></BaseProgress>
+
+
   </div>
 </template>
 
 <script>
 import Son from './components/Son.vue'
 import UserInfo from './components/UserInfo.vue';
+import BaseProgress from './components/BaseProgress'
 export default {
   name: 'App',
   data() {
@@ -31,8 +37,9 @@ export default {
       car: {
         brand: '宝马'
       },
-      hobby: ['篮球','足球','羽毛球']
+      hobby: ['篮球','足球','羽毛球'],
 
+      width: 30
     }
   },
   methods: {
@@ -42,7 +49,7 @@ export default {
     }
   },
   components: {
-    Son,UserInfo
+    Son,UserInfo,BaseProgress
   },
 }
 </script>
