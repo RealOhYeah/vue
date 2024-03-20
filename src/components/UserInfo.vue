@@ -3,7 +3,7 @@
     <h3>我是个人信息组件</h3>
     <div>姓名：{{ username }} </div>
     <div>年龄：{{ age }} </div>
-    <div>是否单身：{{ isSingle ? 是 : 不是 }} </div>
+    <div>是否单身：{{ isSingle ? '是' : '不是' }} </div>
     <div>座驾：{{ car.brand }} </div>
     <div>兴趣爱好：{{ hobby.join('、') }} </div>
 

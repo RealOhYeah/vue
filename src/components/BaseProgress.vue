@@ -35,16 +35,18 @@ export default {
     border: 3px solid #272425;
     box-sizing: border-box;
     margin-bottom: 30px;
+    position: relative;
 }
 
 .inner {
-    position: relative;
+ 
+    position: absolute;
     background: #379bff;
     border-radius: 15px;
-    height: 25px;
+    height: 26px;
     box-sizing: border-box;
-    left: -3px;
-    top: -2px;
+    left: -2px;
+    top: -2.5px;
 }
 
 .inner span {
