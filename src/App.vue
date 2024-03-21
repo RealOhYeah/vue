@@ -19,15 +19,19 @@ import TodoMain  from './components/TodoMain.vue'
 // 2.通过父传子，将数据传递给TodoMain
 // 3.利用 v-for渲染
 
-export default {
-  data () {
-    return {
-      
-      list:   JSON.parse(localStorage.getItem('list')) ||  [
+const fruitLocal = JSON.parse(localStorage.getItem('list')) 
+const defaultArr =  [
         { id: 1 , name: '吃饭'},
         { id: 2 , name: '逛街'},
         { id: 3 , name: '看电影'}  
-      ],
+      ]
+
+export default {
+
+  data () {
+    return {
+      
+      list:   ( !fruitLocal || fruitLocal.length === 0) ? defaultArr : fruitLocal,
     
     }
   },
