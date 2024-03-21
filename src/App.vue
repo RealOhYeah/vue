@@ -22,7 +22,8 @@ import TodoMain  from './components/TodoMain.vue'
 export default {
   data () {
     return {
-      list:[
+      
+      list:   JSON.parse(localStorage.getItem('list')) ||  [
         { id: 1 , name: '吃饭'},
         { id: 2 , name: '逛街'},
         { id: 3 , name: '看电影'}  
@@ -32,6 +33,15 @@ export default {
   },
   components: {
     TodoFooter ,TodoMain ,TodoHeader 
+  },
+
+  watch: {
+     list: {
+      deep: true,
+      handler (newValue){
+        localStorage.setItem('list',JSON.stringify(newValue))
+      }
+     }
   },
   methods: {
     handleAdd(todoName){
