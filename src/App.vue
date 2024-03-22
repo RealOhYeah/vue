@@ -1,33 +1,41 @@
 <template>
   <div class="app">
-    <h4>父组件 -- <button>获取组件实例</button></h4>
-    <BaseForm ref="BaseForm"></BaseForm>
-    
-    <button @click="handleGet">获取数据</button>
-    <button @click="handleReset">重置数据</button>
+    <div v-if="isShowEdit">
+      <input type="text" v-model="editValue" ref="inp" />
+      <button>确认</button>
+    </div>
+    <div v-else>
+      <span>{{ title }}</span>
+      <button @click="editFn">编辑</button>
+    </div>
   </div>
 </template>
 
-<script> 
-import BaseForm from './components/BaseForm.vue'
+<script>
 export default {
-  components: {
-    BaseForm,
+  data() {
+    return {
+      title: '大标题',
+      isShowEdit: false,
+      editValue: '',
+    }
   },
   methods: {
-   handleGet(){
-    
-    // console.log(this.$refs.BaseForm.getFormData);
-    console.log(this.$refs.BaseForm.getFormData());
+    editFn() {
+        // 显示输入框
+        this.isShowEdit = true  
+        // 获取焦点($nextTick会等dom更新完，立刻执行)
+        this.$nextTick(() => {
+          console.log(this.$refs.inp);
+          this.$refs.inp.focus()
+        })
+
+        //setTimeout有时也可以完成，但是没有$nextTick精准
+        // setTimeout(() => {
+        //   this.$refs.inp.focus()
+        // },1000)
 
 
-   },
-   handleReset(){
-    this.$refs.BaseForm.resetFormData();
-   }
-  }
+      }  },
 }
-</script>
-
-<style>
-</style>
+</script> 
