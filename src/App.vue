@@ -1,19 +1,22 @@
 <template>
   <div class="app">
-    <input type="text" v-model="msg1" />
-    <br />
-    <!-- v-model的底层其实就是：value和 @input的简写 -->
-    <input type="text" :value="msg2" @input="msg2 = $event.target.value" />
+    <button @click="isShow=true">退出按钮</button>
+    <!-- isShow.sync  => :isShow="isShow" @update:isShow="isShow=$event" -->
+    <BaseDialog :visible.sync="isShow"></BaseDialog>
   </div>
 </template>
 
 <script>
+import BaseDialog from './components/BaseDialog.vue'
 export default {
   data() {
-    return {
-      msg1: '',
-      msg2: '',
+    return { 
+      isShow:true
     }
+  },
+  
+  components: {
+    BaseDialog,
   },
 }
 </script>
