@@ -1,25 +1,24 @@
 <template>
   <div class="app">
-    <button @click="isShow=true">退出按钮</button>
-    <!-- isShow.sync  => :isShow="isShow" @update:isShow="isShow=$event" -->
-    <BaseDialog :visible.sync="isShow"></BaseDialog>
+    <div class="base-chart-box">
+      这是一个捣乱的盒子
+    </div>
+    <BaseChart></BaseChart>
   </div>
 </template>
 
 <script>
-import BaseDialog from './components/BaseDialog.vue'
+import BaseChart from './components/BaseChart.vue'
 export default {
-  data() {
-    return { 
-      isShow:true
-    }
-  },
-  
-  components: {
-    BaseDialog,
-  },
+  components:{
+    BaseChart
+  }
 }
 </script>
 
 <style>
+.base-chart-box {
+  width: 300px;
+  height: 200px;
+}
 </style>
