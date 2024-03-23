@@ -5,9 +5,9 @@
 
      </div>
     <div class="footer_wrap">
-      <a href="#/find">发现音乐</a>
-      <a href="#/my">我的音乐</a>
-      <a href="#/friend">朋友</a>
+      <router-link  to="/find">发现音乐</router-link>
+      <router-link  to="/my">我的音乐</router-link>
+      <router-link  to="/friend">朋友</router-link>
     </div>
     <div class="top">
         <router-view></router-view>
@@ -44,6 +44,11 @@ body {
   color: #ccc;
   border: 1px solid black;
 }
+
+.footer_wrap a.router-link-active{
+  background-color: gold;
+}
+
 .footer_wrap a:hover {
   background-color: #555;
 }
