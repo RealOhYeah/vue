@@ -1,20 +1,15 @@
-import Find from '@/views/Find.vue';
-import My from '@/views/My.vue';
-import Friend from '@/views/Friend.vue';
+import Home from '@/views/Home'
+import Search from '@/views/Search'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+Vue.use(VueRouter) // VueRouter插件初始化
 
-import Vue from 'vue';
-
-import VueRouter from 'vue-router';
-
-Vue.use(VueRouter);
-
+// 创建了一个路由对象
 const router = new VueRouter({
-   routes : [
-     {  path: '/find', component: Find},
-     {  path: '/my', component: My},
-     {  path: '/friend', component: Friend},  
-   ]
-});
+  routes: [
+    { path: '/home', component: Home },
+    { path: '/search/:words', component: Search }
+  ]
+}) 
 
 export default router
- 
